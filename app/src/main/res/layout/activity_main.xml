@@ -10,6 +10,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
+    android:background="#ffe5b4"
     tools:context=".MainActivity">
 
     <RelativeLayout
