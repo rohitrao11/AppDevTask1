@@ -21,14 +21,5 @@ public class ScoreActivity extends AppCompatActivity {
         TextView Score = (TextView)findViewById(R.id.scor3);
 
         Score.setText("" + num);
-
-        Button btn1 = (Button) findViewById(R.id.btn1);
-        btn1.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                setContentView(R.layout.roll_layout);
-            }
-        });
     }
 }
