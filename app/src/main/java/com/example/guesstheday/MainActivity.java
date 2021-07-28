@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mButtonCh3;
     private Button mButtonCh4;
 
+    Vibrator vibrator;
+
     private String mAnswer;
     private int mScore = 0;
     private int mQuestionNumber = 0;
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         final LinearLayout linearLayout = findViewById(R.id.activity_quiz);
         mScoreView = (TextView)findViewById(R.id.score);
@@ -46,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonCh1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibrator.vibrate(1000);
                 if (mButtonCh1.getText() == mAnswer){
                     new CountDownTimer(400, 1000) {
                         public void onFinish() {
@@ -89,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonCh2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibrator.vibrate(1000);
                 if (mButtonCh2.getText() == mAnswer){
                     new CountDownTimer(400, 1000) {
                         public void onFinish() {
@@ -132,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonCh3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibrator.vibrate(1000);
                 if (mButtonCh3.getText() == mAnswer){
                     new CountDownTimer(400, 1000) {
                         public void onFinish() {
@@ -175,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonCh4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibrator.vibrate(1000);
                 if (mButtonCh4.getText() == mAnswer){
                     new CountDownTimer(400, 1000) {
                         public void onFinish() {
